@@ -1,9 +1,9 @@
-FROM node:8.9.4-alpine
+# FROM node:8.9.4-alpine
 
-ENV NODE_ENV=development
+# ENV NODE_ENV=development
 
-RUN npm install -g express-generator@4.15.0
+# RUN npm install -g express-generator@4.15.0
 
-WORKDIR /app
+# WORKDIR /app
 
-EXPOSE 3000
+# EXPOSE 3000
