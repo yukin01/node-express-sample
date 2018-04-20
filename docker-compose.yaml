@@ -1,8 +1,8 @@
 version: '3'
 services:
   webserver:
-    build: node
-    image: node-express-dev:1.0
+    build: node-dev
+    image: node-express:1.0-dev
     container_name: node
     tty: true
     volumes:
