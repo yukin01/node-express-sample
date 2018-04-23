@@ -14,4 +14,4 @@ RUN RUN apk add --update --no-cache tzdata && \
 
 EXPOSE 3000
 
-CMD [ "npm", "run" ]
+CMD [ "npm", "start" ]
