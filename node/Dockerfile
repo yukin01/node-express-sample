@@ -1,9 +1,17 @@
-# FROM node:8.9.4-alpine
+FROM node:8.11.1-alpine
 
-# ENV NODE_ENV=development
+ENV NODE_ENV=production
 
-# RUN npm install -g express-generator@4.15.0
+COPY ./app /app
 
-# WORKDIR /app
+WORKDIR /app
 
-# EXPOSE 3000
+RUN RUN apk add --update --no-cache tzdata && \
+    cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
+    echo "Asia/Tokyo" > /etc/timezone && \
+    apk del tzdata && \
+    npm install
+
+EXPOSE 3000
+
+CMD [ "npm", "run" ]
