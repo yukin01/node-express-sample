@@ -1,4 +1,4 @@
-# node-express-sample
+# bindmount
 
 bind mount を利用して node.js の開発を行う  
 clone した後以下のコマンドを実行
