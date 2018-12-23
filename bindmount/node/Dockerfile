@@ -11,7 +11,7 @@ RUN apk add --update --no-cache tzdata && \
 
 WORKDIR /app
 
-COPY ./app/package*.json /app
+COPY ./app/package*.json /app/
 
 RUN npm install
 
