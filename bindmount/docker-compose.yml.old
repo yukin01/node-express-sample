@@ -5,8 +5,8 @@ services:
     image: node-express:1.0-dev
     container_name: node
     tty: true
-    # command: ["dev"]
     volumes:
       - ./node/app:/app
     ports:
       - "3000:3000"
+    # command: ["dev"]

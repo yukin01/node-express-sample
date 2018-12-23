@@ -1,0 +1,14 @@
+version: '3'
+services:
+  webserver:
+    image: node:10-alpine
+    container_name: node
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./node/app:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    command: ["npm", "run", "dev"]
