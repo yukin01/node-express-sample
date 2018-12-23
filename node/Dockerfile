@@ -6,7 +6,7 @@ COPY ./app /app
 
 WORKDIR /app
 
-RUN RUN apk add --update --no-cache tzdata && \
+RUN apk add --update --no-cache tzdata && \
     cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     echo "Asia/Tokyo" > /etc/timezone && \
     apk del tzdata && \
