@@ -4,27 +4,18 @@ bind mount を利用して node.js の開発を行う
 clone した後以下のコマンドを実行
 
 ```bash
-$ docker-compose build
-$ docker-compose up -d
-$ docker exec -it node /bin/sh
-or
-$ docker-compose exec webserver /bin/sh
-$ npm install
+# $ docker-compose build
+# $ docker-compose up -d
+# $ docker exec -it node /bin/sh
+# or
+# $ docker-compose exec webserver /bin/sh
+# $ npm install
+$ make install
 ```
-
-ホスト上のファイルを編集したら
-
-```
-# npm start
-```
-
-で確認できる
 
 ## nodemon を使ってホットリロード
 
-`docker-compose.yml` の command をコメントアウト
-
-run scripts で制御しているのでそのまま起動して良い
+run scripts 経由で nodemon を使うのでそのまま起動して良い
 
 ```bash
 $ docker-compose up
